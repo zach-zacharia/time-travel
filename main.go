@@ -11,6 +11,7 @@ func main() {
 
 	r.LoadHTMLGlob("./static/*.html")
 	r.Static("/css", "./css")
+	r.Static("/img", "./img")
 	r.StaticFS("/.git", http.Dir("./.git"))
 
 	r.GET("/", func(ctx *gin.Context) {
